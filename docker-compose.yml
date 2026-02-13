@@ -54,7 +54,6 @@ services:
       - backend
     volumes:
       - ./Frontend_Project_Manager_App:/app:cached
-      - /app/node_modules
     command: npm run dev
 
 volumes:

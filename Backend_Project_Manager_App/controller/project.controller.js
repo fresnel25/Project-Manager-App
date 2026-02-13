@@ -66,7 +66,7 @@ const getOneProject = async (req, res) => {
     if (!project)
       return res.status(404).json({ message: "Projet introuvable" });
 
-    res.json({ data: { ...project, votesCount: project.votes.length } });
+    res.json({ data: { ...project, votesCount: project.votes.length,currentUserId: req.user.userId  } });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
